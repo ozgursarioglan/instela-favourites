@@ -19,15 +19,17 @@ class FormSection extends Component {
     handleSubmit = () => {
         const config = {
             headers: {
-                "Access-Control-Allow-Origi": ",",
+                "Access-Control-Allow-Origin": "https://www.test-cors.org",
                 "access-control-allow-headers": "origin, x-requested-with, content-type, accept"
             }
         };
+        const cors = 'https://cors-anywhere.herokuapp.com/'
         const url = `https://instela.com/api/v2/entries?t=${this.state.username}&page=${this.state.pageNumber}`;
-        axios.get(url, config)
+        axios.get(cors+url, config)
             .then(response => response.data)
             .then(entries => {
                 this.setState({ entries: entries });
+                console.log(entries)
             });
     }
 
@@ -37,7 +39,7 @@ class FormSection extends Component {
             <div>
             <Form onSubmit={this.handleSubmit} size="large">
                 <Form.Group widths='equal'>
-                    <Form.Input name="name" onChange={this.handleChange}  value="wondrous" fluid placeholder='yazar adı' />
+                    <Form.Input name="name" onChange={this.handleChange} fluid placeholder='yazar adı' />
                     <Form.Button color="teal" size="large">instelada ara</Form.Button>
                 </Form.Group>
             </Form>
