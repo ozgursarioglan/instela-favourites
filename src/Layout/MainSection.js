@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Container, Form, Header, Divider, Button, Input} from "semantic-ui-react";
+import {Container, Header} from "semantic-ui-react";
 import FormSection from "../Components/FormSection";
 
 class MainSection extends Component {

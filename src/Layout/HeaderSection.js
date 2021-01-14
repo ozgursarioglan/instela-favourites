@@ -1,14 +1,12 @@
 import React, { Component } from 'react'
-import {Button, Container, Dropdown, Menu, Image} from 'semantic-ui-react'
+import {Container, Dropdown, Menu} from 'semantic-ui-react'
 
 export default class HeaderSection extends Component {
     state = { activeItem: 'home' }
 
-    handleItemClick = (e, { name }) => this.setState({ activeItem: name })
+
 
     render() {
-        const { activeItem } = this.state
-
         return (
             <Menu color="teal" size='large' fixed="top" stackable borderless inverted>
                 <Container>
