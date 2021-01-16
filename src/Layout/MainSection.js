@@ -8,7 +8,7 @@ class MainSection extends Component {
             <div>
                 <Container style={{ marginTop: "5em" }}>
                     <Header as='h1'>
-                        instela yazar arama motoru
+                        instela giri arama motoru
                     </Header>
                     <FormSection/>
                 </Container>
